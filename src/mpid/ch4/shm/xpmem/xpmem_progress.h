@@ -1,0 +1,150 @@
+/* -*- Mode: C; c-basic-offset:4 ; indent-tabs-mode:nil ; -*- */
+/*
+ *  (C) 2006 by Argonne National Laboratory.
+ *      See COPYRIGHT in top-level directory.
+ *
+ *  Portions of this code were written by Intel Corporation.
+ *  Copyright (C) 2011-2016 Intel Corporation.  Intel provides this material
+ *  to Argonne National Laboratory subject to Software Grant and Corporate
+ *  Contributor License Agreement dated February 8, 2012.
+ */
+#ifndef XPMEM_PROGRESS_H_INCLUDED
+#define XPMEM_PROGRESS_H_INCLUDED
+
+#include "xpmem_impl.h"
+
+static inline int MPIDI_SHM_do_progress_recv(int blocking, int *completion_count)
+{
+    MPIR_FUNC_VERBOSE_STATE_DECL(MPID_STATE_MPIDI_SHM_DO_PROGRESS_RECV);
+    MPIR_FUNC_VERBOSE_ENTER(MPID_STATE_MPIDI_SHM_DO_PROGRESS_RECV);
+
+    MPIR_Assert(0); /* FFF */
+
+    MPIR_FUNC_VERBOSE_EXIT(MPID_STATE_MPIDI_SHM_DO_PROGRESS_RECV);
+    return MPI_SUCCESS;
+}
+
+static inline int MPIDI_SHM_do_progress_send(int blocking, int *completion_count)
+{
+    MPIR_FUNC_VERBOSE_STATE_DECL(MPID_STATE_MPIDI_SHM_DO_PROGRESS_SEND);
+    MPIR_FUNC_VERBOSE_ENTER(MPID_STATE_MPIDI_SHM_DO_PROGRESS_SEND);
+
+    MPIR_Assert(0); /* FFF */
+
+    MPIR_FUNC_VERBOSE_EXIT(MPID_STATE_MPIDI_SHM_DO_PROGRESS_SEND);
+    return MPI_SUCCESS;
+}
+
+static inline int MPIDI_SHM_progress(int blocking)
+{
+    int mpi_errno = MPI_SUCCESS;
+    extern MPIDI_SHM_funcs_t MPIDI_SHM_posix_funcs;
+    MPIR_FUNC_VERBOSE_STATE_DECL(MPID_STATE_MPIDI_SHM_PROGRESS);
+    MPIR_FUNC_VERBOSE_ENTER(MPID_STATE_MPIDI_SHM_PROGRESS);
+
+    mpi_errno = ((&MPIDI_SHM_posix_funcs)->progress)(blocking);
+
+    MPIR_FUNC_VERBOSE_EXIT(MPID_STATE_MPIDI_SHM_PROGRESS);
+    return mpi_errno;
+}
+
+static inline int MPIDI_SHM_progress_test(void)
+{
+    MPIR_FUNC_VERBOSE_STATE_DECL(MPID_STATE_MPIDI_SHM_PROGRESS_TEST);
+    MPIR_FUNC_VERBOSE_ENTER(MPID_STATE_MPIDI_SHM_PROGRESS_TEST);
+
+    MPIR_Assert(0);
+
+    MPIR_FUNC_VERBOSE_EXIT(MPID_STATE_MPIDI_SHM_PROGRESS_TEST);
+    return MPI_SUCCESS;
+}
+
+static inline int MPIDI_SHM_progress_poke(void)
+{
+    MPIR_FUNC_VERBOSE_STATE_DECL(MPID_STATE_MPIDI_SHM_PROGRESS_POKE);
+    MPIR_FUNC_VERBOSE_ENTER(MPID_STATE_MPIDI_SHM_PROGRESS_POKE);
+
+    MPIR_Assert(0);
+
+    MPIR_FUNC_VERBOSE_EXIT(MPID_STATE_MPIDI_SHM_PROGRESS_POKE);
+    return MPI_SUCCESS;
+}
+
+static inline void MPIDI_SHM_progress_start(MPID_Progress_state * state)
+{
+    MPIR_FUNC_VERBOSE_STATE_DECL(MPID_STATE_MPIDI_SHM_PROGRESS_START);
+    MPIR_FUNC_VERBOSE_ENTER(MPID_STATE_MPIDI_SHM_PROGRESS_START);
+
+    MPIR_Assert(0);
+
+    MPIR_FUNC_VERBOSE_EXIT(MPID_STATE_MPIDI_SHM_PROGRESS_START);
+    return ;
+}
+
+static inline void MPIDI_SHM_progress_end(MPID_Progress_state * state)
+{
+    MPIR_FUNC_VERBOSE_STATE_DECL(MPID_STATE_MPIDI_SHM_PROGRESS_END);
+    MPIR_FUNC_VERBOSE_ENTER(MPID_STATE_MPIDI_SHM_PROGRESS_END);
+
+    MPIR_Assert(0);
+
+    MPIR_FUNC_VERBOSE_EXIT(MPID_STATE_MPIDI_SHM_PROGRESS_END);
+    return ;
+}
+
+static inline int MPIDI_SHM_progress_wait(MPID_Progress_state * state)
+{
+    MPIR_FUNC_VERBOSE_STATE_DECL(MPID_STATE_MPIDI_SHM_PROGRESS_WAIT);
+    MPIR_FUNC_VERBOSE_ENTER(MPID_STATE_MPIDI_SHM_PROGRESS_WAIT);
+
+    MPIR_Assert(0);
+
+    MPIR_FUNC_VERBOSE_EXIT(MPID_STATE_MPIDI_SHM_PROGRESS_WAIT);
+    return MPI_SUCCESS;
+}
+
+static inline int MPIDI_SHM_progress_register(int (*progress_fn) (int *))
+{
+    MPIR_FUNC_VERBOSE_STATE_DECL(MPID_STATE_MPIDI_SHM_PROGRESS_REGISTER);
+    MPIR_FUNC_VERBOSE_ENTER(MPID_STATE_MPIDI_SHM_PROGRESS_REGISTER);
+
+    MPIR_Assert(0);
+
+    MPIR_FUNC_VERBOSE_EXIT(MPID_STATE_MPIDI_SHM_PROGRESS_REGISTER);
+    return MPI_SUCCESS;
+}
+
+static inline int MPIDI_SHM_progress_deregister(int id)
+{
+    MPIR_FUNC_VERBOSE_STATE_DECL(MPID_STATE_MPIDI_SHM_PROGRESS_DEREGISTER);
+    MPIR_FUNC_VERBOSE_ENTER(MPID_STATE_MPIDI_SHM_PROGRESS_DEREGISTER);
+
+    MPIR_Assert(0);
+
+    MPIR_FUNC_VERBOSE_EXIT(MPID_STATE_MPIDI_SHM_PROGRESS_DEREGISTER);
+    return MPI_SUCCESS;
+}
+
+static inline int MPIDI_SHM_progress_activate(int id)
+{
+    MPIR_FUNC_VERBOSE_STATE_DECL(MPID_STATE_MPIDI_SHM_PROGRESS_ACTIVATE);
+    MPIR_FUNC_VERBOSE_ENTER(MPID_STATE_MPIDI_SHM_PROGRESS_ACTIVATE);
+
+    MPIR_Assert(0);
+
+    MPIR_FUNC_VERBOSE_EXIT(MPID_STATE_MPIDI_SHM_PROGRESS_ACTIVATE);
+    return MPI_SUCCESS;
+}
+
+static inline int MPIDI_SHM_progress_deactivate(int id)
+{
+    MPIR_FUNC_VERBOSE_STATE_DECL(MPID_STATE_MPIDI_SHM_PROGRESS_DEACTIVATE);
+    MPIR_FUNC_VERBOSE_ENTER(MPID_STATE_MPIDI_SHM_PROGRESS_DEACTIVATE);
+
+    MPIR_Assert(0);
+
+    MPIR_FUNC_VERBOSE_EXIT(MPID_STATE_MPIDI_SHM_PROGRESS_DEACTIVATE);
+    return MPI_SUCCESS;
+}
+
+#endif /* XPMEM_PROGRESS_H_INCLUDED */
